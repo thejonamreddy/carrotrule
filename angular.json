@@ -32,7 +32,7 @@
             ],
             "scripts": [
               "src/assets/js/scripts.js",
-              "src/assets/js/datatables-simple-demo.js"
+              "src/assets/js/jquery.min.js"
             ]
           },
           "configurations": {
