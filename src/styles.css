@@ -6,3 +6,6 @@
 a, a:hover {
     text-decoration: none !important;
 }
+.form-control:focus {
+    box-shadow: none !important;
+}

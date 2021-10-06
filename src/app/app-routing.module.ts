@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule),
   },
+  {
+    path: 'workspace',
+    loadChildren: () => import('./components/workspace/workspace.module').then(m => m.WorkspaceModule),
+  },
 ];
 
 @NgModule({

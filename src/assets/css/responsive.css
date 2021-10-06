@@ -1,0 +1,13 @@
+/* lessthan 768px */
+@media (max-width: 768px) {
+    
+    .manage-workflow h1 {
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .manage-workflow h1 {
+        font-size: 38px !important;
+    }
+}

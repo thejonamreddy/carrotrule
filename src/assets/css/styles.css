@@ -2,12 +2,19 @@
 /*!
  * Bootstrap v5.1.0 (https://getbootstrap.com/)
  */
+ /* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+ @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+ 
+ * {
+  font-family: 'Roboto', sans-serif;
+ }
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
+  --bs-white: #fff;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffc107;
   --bs-green: #198754;
@@ -15,6 +22,7 @@
   --bs-cyan: #0dcaf0;
   --bs-white: #fff;
   --bs-gray: #6c757d;
+  --bs-primarycolor: #fe6a6b;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
@@ -31,7 +39,7 @@
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
+  --bs-light: #707070;
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
@@ -51,8 +59,9 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #042B64;
   --bs-body-bg: #fff;
+  --main-color: #042B64;
 }
 
 *,
@@ -5353,6 +5362,9 @@ textarea.form-control-lg {
 .list-group-item-danger {
   color: #842029;
   background-color: #f8d7da;
+}
+a{
+  cursor: pointer;
 }
 .list-group-item-danger.list-group-item-action:hover, .list-group-item-danger.list-group-item-action:focus {
   color: #842029;
@@ -11407,7 +11419,7 @@ body {
   margin: 0;
 }
 .sb-topnav.navbar-dark #sidebarToggle {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
 }
 .sb-topnav.navbar-light #sidebarToggle {
   color: #212529;
@@ -11438,9 +11450,13 @@ body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   position: relative;
+  font-weight: 500;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+}
+.sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-nav-link-icon {
+  font-size: 20px;
 }
 .sb-sidenav .sb-sidenav-menu .nav .nav-link .sb-sidenav-collapse-arrow {
   display: inline-block;
@@ -11677,4 +11693,10 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
+  color: var(--bs-primarycolor);
+}
+.sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
+  color: var(--bs-primarycolor);
 }

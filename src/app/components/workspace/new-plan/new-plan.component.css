@@ -1,0 +1,207 @@
+.steps .step {
+  display: block;
+  width: 100%;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.steps .step .step-icon-wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.steps .step .step-icon-wrap::before,
+.steps .step .step-icon-wrap::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 3px;
+  margin-top: -1px;
+  background-color: #989898 !important;
+  content: "";
+  z-index: 1;
+}
+
+.steps .step .step-icon-wrap::before {
+  left: 0;
+}
+
+.steps .step .step-icon-wrap::after {
+  right: 0;
+}
+
+.steps .step .step-icon {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #989898;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #989898;
+  font-size: 21px;
+  line-height: 36px;
+  z-index: 5;
+}
+
+.steps .step .step-title {
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: #989898;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.steps .step:first-child .step-icon-wrap::before {
+  display: none;
+}
+
+.steps .step:last-child .step-icon-wrap::after {
+  display: none;
+}
+
+.steps .step.completed .step-icon-wrap::before,
+.steps .step.completed .step-icon-wrap::after {
+  background-color: var(--bs-primarycolor);
+}
+
+.steps .step.completed .step-icon {
+  border-color: var(--bs-primarycolor);
+  background-color: var(--bs-primarycolor);
+  color: #fff;
+}
+
+/* @media (max-width: 576px) {
+  .flex-sm-nowrap .step .step-icon-wrap::before,
+  .flex-sm-nowrap .step .step-icon-wrap::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-md-nowrap .step .step-icon-wrap::before,
+  .flex-md-nowrap .step .step-icon-wrap::after {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .flex-lg-nowrap .step .step-icon-wrap::before,
+  .flex-lg-nowrap .step .step-icon-wrap::after {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .flex-xl-nowrap .step .step-icon-wrap::before,
+  .flex-xl-nowrap .step .step-icon-wrap::after {
+    display: none;
+  }
+} */
+
+@media (max-width: 768px) {
+  .card-body .flex-wrap {
+  }
+}
+
+.bg-faded,
+.bg-secondary {
+  background-color: #f5f5f5 !important;
+}
+.completed h4 {
+  color: #fe6a6b !important;
+}
+/* stepper end */
+.plan .title {
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 0.3em 0 0.3em 0.8em;
+  font-size: 1.5rem;
+}
+.workspace .card-text {
+  font-size: 14px;
+}
+.workspace .card img {
+  height: 150px;
+}
+.workspace .card h5 {
+  font-size: 1.3rem;
+}
+.workspace .card {
+  /* box-shadow: rgb(0 0 0 / 4%) 0px 0px 13px 0px; */
+  box-shadow: rgb(0 0 0 / 6%) 2px 2px 15px 0px;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+.edit-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 2px;
+  background: #faeee0;
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  margin-top: 3px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--bs-primarycolor);
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s;
+}
+.edit-icon {
+  display: none;
+}
+
+.workspace .card:hover .edit-icon {
+  display: block;
+}
+
+.plan-form .col-lg-4 {
+  margin-bottom: 1em;
+}
+.plan-form label {
+  font-weight: 500;
+  color: #042b64;
+  margin-bottom: 0.2em;
+}
+.plan-form textarea {
+  height: 100px;
+}
+.plan-form .form-control {
+  border-color: #d9d9d9;
+}
+.plan-form .input-group {
+  margin-bottom: 0 !important;
+}
+.plan ::placeholder {
+  color: #989898;
+  font-size: 13px;
+}
+.input-left {
+  color: #042b64;
+  background: transparent;
+  border-right: 0;
+  padding: 0.375rem 0.3rem;
+}
+.input-right {
+  color: #042b64;
+  background: transparent;
+}
+.bl-0 {
+  border-left: 0;
+  padding-left: 0.2em !important;
+}
+.plan-footer {
+  padding: 1em;
+  margin-top: 2em;
+}
+.plan-footer img {
+  margin-right: 1.5em;
+  width: 25px;
+}
