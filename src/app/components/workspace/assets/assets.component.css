@@ -290,12 +290,124 @@ tr.spacer {
 }
   /* grid end */
 /* sidebar */
-.sidebar ul {}
-.sidebar ul li{
-    list-style: none;
-    text-emphasis: center;
+.sidebar ul {
+    border: 1px solid #A8A8A8;
+    border-top: 0;
+    border-bottom: 0;
+    padding-left: 0;
 }
-.sidebar ul li span{}
-.sidebar ul li h5{}
+.sidebar ul li{
+    list-style: none !important;
+    padding: 1em 0;
+}
+.sidebar ul li.active{
+    background: var(--bs-primarycolor);
+    color: #fff;
+}
+.icon-box.active{
+    background: var(--bs-primarycolor);
+    color: #fff;
+    border: 0;
+}
+.sidebar ul li span{
+    padding-bottom: 0.2em;
+    font-size: 1.5rem;
+}
 
+.sidebar ul li h5{
+    font-size: 0.75rem;
+  text-align: center;
+}
+.icon-box{
+    padding: 0.8rem;
+    margin-bottom: 1em;
+    border-radius: 4px;
+    height: 92px;
+    border: 1px solid #707070;
+}
+.icon-box i{
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+}
+.icon-box h5{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.bor-bottom {
+    border-bottom: 1px solid #A8A8A8;
+}
 /* sidebar end */
+/* modal */
+.modal-header span img{
+    width: 15px;
+}
+.workspace .card-text {
+    font-size: 14px;
+  }
+  .workspace .card img {
+    height: 150px;
+  }
+  .workspace .card h5 {
+    font-size: 1.3rem;
+  }
+  .workspace .card {
+    /* box-shadow: rgb(0 0 0 / 4%) 0px 0px 13px 0px; */
+    box-shadow: rgb(0 0 0 / 6%) 2px 2px 15px 0px;
+    margin-bottom: 2em;
+    cursor: pointer;
+  }
+  .edit-icon {
+    position: absolute;
+    left: 107px;
+    top: 5px;
+    border-radius: 3px;
+    background: #faeee0;
+    width: 25px;
+    height: 25px;
+    line-height: 15px;
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--bs-primarycolor);
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s;
+  }
+  .edit-icon {
+    display: none;
+  }
+  
+  .workspace .card:hover .edit-icon {
+    display: block;
+  }
+  .plan-form label {
+    font-weight: 500;
+    color: #042b64;
+    margin-bottom: 0.2em;
+  }
+  .plan-form textarea {
+    height: 100px;
+  }
+  .plan-form .form-control {
+    border-color: #d9d9d9;
+  }
+  .plan-form .input-group {
+    margin-bottom: 0 !important;
+  }
+  .plan-form ::placeholder {
+    color: #989898;
+    font-size: 13px;
+  }
+  .plan-form .col-12 {
+    margin-bottom: 1em;
+}
+
+  .plan-footer img {
+    margin-right: 1.5em;
+    width: 25px;
+  }
+  .modal-footer {
+    border: 0;
+    padding-bottom: 1.5rem;
+}
+
