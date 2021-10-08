@@ -10,6 +10,11 @@ import { WorkspaceRoutingModule } from './workspace-routing.module';
 import { WorkspaceComponent } from './workspace.component';
 import { NewPlanComponent } from './new-plan/new-plan.component';
 import { AssetsComponent } from './assets/assets.component';
+import { RolesComponent } from './roles/roles.component';
+import { QuotaComponent } from './quota/quota.component';
+import { DataSourceComponent } from './data-source/data-source.component';
+import { TeamComponent } from './team/team.component';
+import { ComputedFieldComponent } from './computed-field/computed-field.component';
 
 
 @NgModule({
@@ -17,6 +22,11 @@ import { AssetsComponent } from './assets/assets.component';
     WorkspaceComponent,
     NewPlanComponent,
     AssetsComponent,
+    RolesComponent,
+    QuotaComponent,
+    DataSourceComponent,
+    TeamComponent,
+    ComputedFieldComponent,
   ],
   imports: [
     CommonModule,

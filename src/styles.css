@@ -3,9 +3,15 @@
     outline: 0;
     box-shadow: none !important;
 }
+.cursor{
+    cursor: pointer;
+}
 a, a:hover {
     text-decoration: none !important;
 }
-.form-control:focus {
+.form-control:focus, select:focus {
     box-shadow: none !important;
+}
+.form-select:focus, .dataTable-selector:focus {
+    border-color: #ced4da;
 }

@@ -1,0 +1,286 @@
+<!-- stepper -->
+<div class="container padding-bottom-3x mb-1">
+  <div class="card-body px-md-5">
+    <div class="steps d-flex flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+      <div class="step completed">
+        <div class="step-icon-wrap">
+          <div class="step-icon"><i class="iconify" data-icon="bx:bx-target-lock"></i></div>
+        </div>
+        <h4 class="step-title">Define</h4>
+      </div>
+      <div class="step completed">
+        <div class="step-icon-wrap">
+          <div class="step-icon"><i class="iconify" data-icon="ant-design:plus-square-outlined"></i></div>
+        </div>
+        <h4 class="step-title">Assets</h4>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">
+          <div class="step-icon"><i class="iconify" data-icon="clarity:number-list-line"></i></div>
+        </div>
+        <h4 class="step-title">Excel upload</h4>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">
+          <div class="step-icon"><span class="iconify" data-icon="healthicons:i"></span></div>
+        </div>
+        <h4 class="step-title">Analytics</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- stepper end -->
+<div class="container-fluid assets">
+  <div class="row bor-bottom">
+    <div class="col-lg-8">
+      <div class="row title">
+        <div class="col">
+          <h3 class="">Roles</h3>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span class="iconify"
+              style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
+            <span class="text-decoration-underline">Role</span></button>
+        </div>
+      </div>
+      <!-- role start -->
+      <div class="container">
+        <div class="row pt-4">
+          <div class="col-md-3">
+            <label>Role</label>
+            <div class="form-group">
+              <select class="form-select">
+                <option selected>Select Role</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <label>Description<span class="text-danger">*</span></label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Description here">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label>Quota?</label>
+            <div class="form-group">
+              <select class="form-select">
+                <option selected>Yes</option>
+                <option value="2">No</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="col-md-2 pt-4">
+            <button type="button" class="btn btn-default"><span class="iconify" style="color: #48b05d;"
+                data-icon="ant-design:plus-circle-outlined"></span>
+              <span class="text-decoration-underline">Add</span></button>
+          </div>
+        </div>
+        <div class="row pt-3">
+          <div class="table-responsive role-table">
+            <table class="table table-responsive-md table-bordered">
+              <tbody>
+                <tr>
+                  <td>Sale Person</td>
+                  <td style="width: 45%">Description01</td>
+                  <td class="text-end">yes</td>
+                  <td style="width: 10%">
+                    <div class="d-flex">
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="bx:bxs-edit-alt"></span></a>
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="ic:outline-cancel"></span></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Client</td>
+                  <td style="width: 45%">Description02</td>
+                  <td class="text-end">yes</td>
+                  <td>
+                    <div class="d-flex">
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="bx:bxs-edit-alt"></span></a>
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="ic:outline-cancel"></span></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>HR</td>
+                  <td style="width: 45%">Description03</td>
+                  <td class="text-end">No</td>
+                  <td>
+                    <div class="d-flex">
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="bx:bxs-edit-alt"></span></a>
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="ic:outline-cancel"></span></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Customer</td>
+                  <td style="width: 45%">Description04</td>
+                  <td class="text-end">yes</td>
+                  <td>
+                    <div class="d-flex">
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="bx:bxs-edit-alt"></span></a>
+                      <a class="btn btn-default" href="#"><span class="iconify"
+                          data-icon="ic:outline-cancel"></span></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- footer -->
+        <div class="row">
+          <div class="col-12 text-end row-footer">
+            <img src="../../../../assets/images/delete.svg" alt="">
+            <img src="../../../../assets/images/edit.svg" alt="">
+            <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+          </div>
+        </div>
+        <!-- footer end -->
+      </div>
+      <!-- role end -->
+    </div>
+    <!-- right sidebar start -->
+    <div class="col-lg-4 sidebar">
+      <h3 class="title asset-pad">Workspace</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <ul>
+            <li class="active">
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                  data-icon="fa:file-text"></i></span>
+              <h5>Workspace</h5>
+            </li>
+            <li>
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify top-icon"
+                  data-icon="bx:bx-data"></i></span>
+              <h5>Data Source</h5>
+            </li>
+            <li>
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                  data-icon="ic:sharp-rule"></i></span>
+              <h5>Rule</h5>
+            </li>
+            <li>
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                  data-icon="icon-park-outline:communication"></i></span>
+              <h5>Communication</h5>
+            </li>
+            <li>
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                  data-icon="typcn:flow-merge"></i></span>
+              <h5>Workflow</h5>
+            </li>
+            <li>
+              <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                  data-icon="bx:bx-list-ol"></i></span>
+              <h5>Task</h5>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-8 pt-4">
+          <div class="row">
+            <div class="col-md-6 cursor" routerLink="../user">
+              <div class="icon-box">
+                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                    data-icon="carbon:user-avatar"></span></i>
+                <h5><a routerLink="../user">User</a></h5>
+              </div>
+            </div>
+            <div class="col-md-6 cursor" routerLink="../roles">
+              <div class="icon-box active">
+                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                    data-icon="bx:bx-user-check"></span></i>
+                <h5><a routerLink="../roles">Roles</a></h5>
+              </div>
+            </div>
+            <div class="col-md-6 cursor" routerLink="../team">
+              <div class="icon-box">
+                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                    data-icon="ri:team-line"></span></i>
+                <h5><a routerLink="../team">Team</a></h5>
+              </div>
+            </div>
+            <div class="col-md-6 cursor" routerLink="../quota">
+              <div class="icon-box">
+                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                    data-icon="carbon:money"></span></i>
+                <h5><a routerLink="../quota">quota</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- right sidebar end -->
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-end pt-3 mb-4">
+      <button class="btn btn-secondary me-2">Back</button>
+      <button class="btn btn-primarycolor">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- modal start -->
+<ng-template #user>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">New User</h4>
+    <!-- <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button> -->
+    <span class="close pull-right" aria-label="Close" (click)="modalRef?.hide()"><img
+        src="../../../../assets/images/cross_black.svg" alt=""></span>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-4 workspace">
+        <div class="card">
+          <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
+          <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
+        </div>
+      </div>
+      <div class="col-md-8 plan-form">
+        <div class="col-12">
+          <label>Username</label>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Username">
+          </div>
+        </div>
+        <div class="col-12">
+          <label>Email</label>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Email@example.com">
+          </div>
+        </div>
+        <div class="col-12">
+          <label>Phone no.</label>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="8989898989">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <!-- footer -->
+    <div class="col-12 text-center plan-footer">
+      <img src="../../../../assets/images/delete.svg" alt="">
+      <img src="../../../../assets/images/edit.svg" alt="">
+      <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+    </div>
+    <!-- footer end -->
+  </div>
+</ng-template>
+<!-- modal end -->

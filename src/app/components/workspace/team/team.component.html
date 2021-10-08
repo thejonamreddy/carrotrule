@@ -1,0 +1,325 @@
+<!-- stepper -->
+<div class="container padding-bottom-3x mb-1">
+    <div class="card-body px-md-5">
+        <div class="steps d-flex flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="bx:bx-target-lock"></i></div>
+                </div>
+                <h4 class="step-title">Define</h4>
+            </div>
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="ant-design:plus-square-outlined"></i></div>
+                </div>
+                <h4 class="step-title">Assets</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="clarity:number-list-line"></i></div>
+                </div>
+                <h4 class="step-title">Excel upload</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><span class="iconify" data-icon="healthicons:i"></span></div>
+                </div>
+                <h4 class="step-title">Analytics</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- stepper end -->
+<div class="container-fluid assets">
+    <div class="row bor-bottom">
+        <div class="col-lg-8">
+            <div class="row title">
+                <div class="col">
+                    <h3 class="">Team</h3>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span
+                            class="iconify" style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
+                        <span class="text-decoration-underline">Team</span></button>
+                </div>
+            </div>
+            <!-- team start -->
+            <div class="row pt-4 team-items">
+                <div class="col-md-3 workspace">
+                    <div class="card">
+                        <img src="../../../../assets/images/team.png" class="card-img-top" alt="...">
+                        <div class="edit-icon edit-icon1"><span class="iconify" data-icon="eva:edit-2-fill"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 p-md-0">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>Project Name</strong> : <span>Sale Team</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Name</strong> : <span>Sale Team</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Category</strong> : <span>Marketing</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Industry Type</strong> : <span>IndustryType</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Keywords</strong> : <span>Sale</span></p>
+                        </div>
+                        <div class="col-md-12">
+                            <p><strong>Description</strong> : <span>Quam quod minima quasi soluta ea est harum odit.
+                                    quasi soluta ea est ha
+                                    harum odit. quasi solute.</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Target :</strong> <span>$254</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Duration : </strong> <span>Monthly</span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Recursive : </strong> <span>Yes</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <label>Add User</label>
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option selected>Select User</option>
+                            <option value="1">One</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>User Role</label>
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option selected>Select User Role</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2 pt-4">
+                    <button type="button" class="btn btn-default"><span class="iconify" style="color: #48b05d;"
+                            data-icon="ant-design:plus-circle-outlined"></span>
+                        <span class="text-decoration-underline">Add</span></button>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <div class="team-box d-flex">
+                        <div class="col-md-5">
+                            <p>User_1</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>Manager</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../../../assets/images/cancel.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-box d-flex">
+                        <div class="col-md-5">
+                            <p>User_2</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>HR</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../../../assets/images/cancel.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-box d-flex">
+                        <div class="col-md-5">
+                            <p>User_3</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>Customer</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../../../assets/images/cancel.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-box d-flex">
+                        <div class="col-md-5">
+                            <p>User_4</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>Manager</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../../../assets/images/cancel.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-box d-flex">
+                        <div class="col-md-5">
+                            <p>User_5</p>
+                        </div>
+                        <div class="col-md-5">
+                            <p>Manager</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="../../../../assets/images/cancel.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="row">
+                <div class="col-12 text-end row-footer">
+                    <img src="../../../../assets/images/delete.svg" alt="">
+                    <img src="../../../../assets/images/edit.svg" alt="">
+                    <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+                </div>
+            </div>
+            <!-- footer end -->
+            <!-- team end -->
+        </div>
+        <!-- right sidebar start -->
+        <div class="col-lg-4 sidebar">
+            <h3 class="title asset-pad">Team</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li class="active">
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="fa:file-text"></i></span>
+                            <h5>Workspace</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify top-icon"
+                                    data-icon="bx:bx-data"></i></span>
+                            <h5>Data Source</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="ic:sharp-rule"></i></span>
+                            <h5>Rule</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="icon-park-outline:communication"></i></span>
+                            <h5>Communication</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="typcn:flow-merge"></i></span>
+                            <h5>Workflow</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="bx:bx-list-ol"></i></span>
+                            <h5>Task</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 pt-4">
+                    <div class="row">
+                        <div class="col-md-6 cursor" routerLink="../user">
+                            <div class="icon-box">
+                                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                                        data-icon="carbon:user-avatar"></span></i>
+                                <h5><a routerLink="../user">User</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 cursor" routerLink="../roles">
+                            <div class="icon-box">
+                                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                                        data-icon="bx:bx-user-check"></span></i>
+                                <h5><a routerLink="../roles">Roles</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 cursor" routerLink="../team">
+                            <div class="icon-box active">
+                                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                                        data-icon="ri:team-line"></span></i>
+                                <h5><a routerLink="../team">Team</a></h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 cursor" routerLink="../quota">
+                            <div class="icon-box">
+                                <i class="d-flex justify-content-center align-items-center"><span class="iconify"
+                                        data-icon="carbon:money"></span></i>
+                                <h5><a routerLink="../quota">quota</a></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar end -->
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-end pt-3 mb-4">
+            <button class="btn btn-secondary me-2">Back</button>
+            <button class="btn btn-primarycolor">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- modal start -->
+<ng-template #user>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">New User</h4>
+        <!-- <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button> -->
+        <span class="close pull-right" aria-label="Close" (click)="modalRef?.hide()"><img
+                src="../../../../assets/images/cross_black.svg" alt=""></span>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4 workspace">
+                <div class="card">
+                    <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
+                    <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
+                </div>
+            </div>
+            <div class="col-md-8 plan-form">
+                <div class="col-12">
+                    <label>Username</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Email</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Email@example.com">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Phone no.</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="8989898989">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- footer -->
+        <div class="col-12 text-center plan-footer">
+            <img src="../../../../assets/images/delete.svg" alt="">
+            <img src="../../../../assets/images/edit.svg" alt="">
+            <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+        </div>
+        <!-- footer end -->
+    </div>
+</ng-template>
+<!-- modal end -->
