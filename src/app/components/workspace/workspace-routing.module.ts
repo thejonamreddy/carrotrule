@@ -6,6 +6,7 @@ import { DataSourceComponent } from './data-source/data-source.component';
 import { NewPlanComponent } from './new-plan/new-plan.component';
 import { QuotaComponent } from './quota/quota.component';
 import { RolesComponent } from './roles/roles.component';
+import { RolesandfieldsComponent } from './rolesandfields/rolesandfields.component';
 import { TeamComponent } from './team/team.component';
 import { WorkspaceComponent } from './workspace.component';
 
@@ -57,6 +58,10 @@ const routes: Routes = [
       {
         path: 'computed-field',
         component: ComputedFieldComponent,
+      },
+      {
+        path: 'roles-fields',
+        component: RolesandfieldsComponent,
       },
     ],
   },

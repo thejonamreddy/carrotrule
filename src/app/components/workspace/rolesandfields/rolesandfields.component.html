@@ -32,156 +32,53 @@
 <!-- stepper end -->
 <div class="container-fluid assets">
     <div class="row bor-bottom">
-        <div class="col-lg-8">
-            <div class="row title">
-                <div class="col">
-                    <h3 class="">Computed field</h3>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center plan-form pt-4">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label>Select function</label>
-                        <div class="form-group">
-                            <select class="form-select">
-                                <option selected>Amount in words</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label>Name</label>
-                        <div class="form-group">
-                            <input type="text" placeholder="Computed field name" class="form-control">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="row">
-                            <div class="col"><label>Fields</label></div>
-                            <div class="text-end col"><span class="iconify" style="color: #48b05d;"
-                                data-icon="ant-design:plus-circle-outlined"></span>
-                              <span class="text-decoration-underline"> Add</span></div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-10 pe-0">
-                                <div class="form-group">
-                                    <select class="form-select">
-                                        <option selected>field 1</option>
-                                        <option value="1">One</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../../assets/images/cancel.png" alt="">
-                            </div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-md-10 pe-0">
-                                <div class="form-group">
-                                    <select class="form-select">
-                                        <option selected>field 2</option>
-                                        <option value="1">One</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <img src="../../../../assets/images/cancel.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label>Operators</label>
-                        <div class="row">
-                            <div class="col-md-2 pe-md-0">
-                                <div class="box-icon">
-                                    <i><span class="fa fa-plus" aria-hidden="true"></span></i>
-                                </div>
-                            </div>
-                            <div class="col-md-2 pe-md-0">
-                                <div class="box-icon">
-                                    <i><span class="fa fa-minus" aria-hidden="true"></span></i>
-                                </div>
-                            </div>
-                            <div class="col-md-2 pe-md-0">
-                                <div class="box-icon">
-                                    <i><span class="fa fa-times" aria-hidden="true"></span></i>
-                                </div>
-                            </div>
-                            <div class="col-md-2 pe-md-0">
-                                <div class="box-icon">
-                                    <i><strong><span class="iconify" data-icon="mdi:division"></span></strong></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="6" class="form-control" placeholder="field_Name001+field_Name023"></textarea>
-                        </div>
-                    </div>
-                     <!-- footer -->
-        <div class="row">
-            <div class="col-12 text-end row-footer">
-              <img src="../../../../assets/images/delete.svg" alt="">
-              <img src="../../../../assets/images/edit.svg" alt="">
-              <a><img src="../../../../assets/images/tick.svg" alt=""></a>
-            </div>
-          </div>
-          <!-- footer end -->
-                </div>
-            </div>
-            
+        <div class="col-lg-8 p-md-0">
+            <!-- text editor start -->
+            <div class="NgxEditor__Wrapper">
+                <ngx-editor-menu [editor]="editor"  [toolbar]="toolbar"> </ngx-editor-menu>
+                <ngx-editor
+                  [editor]="editor"
+                  [ngModel]="html"
+                  [disabled]="false"
+                  [placeholder]="'Type here...'"
+                ></ngx-editor>
+              </div>
+            <!-- text editor end -->            
         </div>
         <!-- right sidebar start -->
-        <div class="col-lg-4 sidebar">
+        <div class="col-lg-4 sidebar ps-md-0">
             <div class="d-flex title p-0">
                 <div class="col-md-8 p-0">
-                    <h3 class=" asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> Computed
-                        field</h3>
+                    <h3 class=" asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> Roles & fields</h3>
                 </div>
-                <div class="col-md-4 p-0">
+                <!-- <div class="col-md-4 p-0">
                     <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span
                             class="iconify" style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
                         <span class="text-decoration-underline">Field</span></button>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <ul>
-                        <li>
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
-                                    data-icon="fa:file-text"></i></span>
-                            <h5>Workspace</h5>
-                        </li>
                         <li class="active">
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify top-icon"
-                                    data-icon="bx:bx-data"></i></span>
-                            <h5>Data Source</h5>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify" data-icon="ci:list-checklist-alt"></i></span>
+                            <h5>Roles & fields</h5>
                         </li>
                         <li>
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
-                                    data-icon="ic:sharp-rule"></i></span>
-                            <h5>Rule</h5>
-                        </li>
-                        <li>
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
-                                    data-icon="icon-park-outline:communication"></i></span>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify" data-icon="ci:chat"></i></span>
                             <h5>Communication</h5>
-                        </li>
-                        <li>
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
-                                    data-icon="typcn:flow-merge"></i></span>
-                            <h5>Workflow</h5>
-                        </li>
-                        <li>
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
-                                    data-icon="bx:bx-list-ol"></i></span>
-                            <h5>Task</h5>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-8 pt-4">
-                    <h6>Field List</h6>
+                    <h6 class="text-decoration-underline">Select Role</h6>
+                    <div class="form-group">
+                        <select class="form-select">
+                          <option selected>Role_1</option>
+                          <option value="1">One</option>
+                        </select>
+                      </div>
+                    <h6 class="text-decoration-underline pt-4">Field List</h6>
                     <div class="row">
                         <div class="col-12">
                             <div class="field-list d-flex">
