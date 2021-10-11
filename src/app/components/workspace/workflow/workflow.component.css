@@ -296,7 +296,6 @@ tr.spacer {
     border-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
-    height: 79vh;
 }
 .sidebar ul li{
     list-style: none !important;
@@ -321,7 +320,7 @@ tr.spacer {
   text-align: center;
 }
 .icon-box{
-    padding: 0.8rem;
+    padding: 0.8rem 0;
     margin-bottom: 1em;
     border-radius: 4px;
     height: 92px;
@@ -398,10 +397,7 @@ tr.spacer {
   }
   .plan-form ::placeholder {
     color: #989898;
-    font-size: 0.95rem !important;
-  }
-  .form-select {
-    font-size: 0.95rem !important;
+    font-size: 13px;
   }
   .plan-form .col-12 {
     margin-bottom: 1em;
@@ -416,65 +412,229 @@ tr.spacer {
     padding-bottom: 1.5rem;
 }
 
-ul.dropdown-menu {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 6px 25px #24115d29;
-    border: 1px solid #D9D9D9 !important;
-    height: auto !important;
-}
-ul.dropdown-menu li {
-    padding: 0 !important;
-    font-size: 0.85rem;
-    color: #042B64;
-}
-.field-list {
-    background: #FAEEE0;
-    padding: 0.5em;
-    border-radius: 3px;
-    margin-bottom: 0.5em;
-}
-.field-list p {
-    margin-bottom: 0;
-    font-size: 0.85rem;
-}
-.plan-form label {
-    font-weight: 500;
-    color: #042b64;
-    margin-bottom: 0.2em;
-}
-.box-icon {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #FE6A6B;
-    border-radius: 4px;
-    opacity: 1;
-    padding: 7px 0px;
-    text-align: center;
-    margin-bottom: 0.5em;
-}
-.box-icon i {
-    color: #FE6A6B;
-}
-.row-footer {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-  .row-footer img {
-    margin-left: 1.5em;
-      width: 25px;
-  }
-  .plan-form {
-    font-size: 0.95rem !important;
+/* tree start */
+/* * {margin: 0; padding: 0;} */
+
+.tree ul {
+    padding-top: 20px; position: relative;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
 }
 
-::ng-deep .NgxEditor {
-    height: 496px !important;
-    border: 20px solid #E8E8E8 !important;
-    border-radius: 0 !important;
+.tree li {
+	float: left; text-align: center;
+	list-style-type: none;
+	position: relative;
+	/* padding: 20px 5px 0 5px; */
+  padding: 20px 15px 0 56px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
 }
-::ng-deep .NgxEditor__Wrapper {
-    border: 1px solid #A8A8A8 !important;
-    border-radius: 0 !important;
-    border-bottom: 0 !important;
-    border-right: 0 !important;
-    border-left: 0 !important;
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+	content: '';
+	position: absolute; top: 0; right: 50%;
+	border-top: 3px solid #D9D9D9;
+	width: 50%; height: 20px;
 }
+.tree li::after{
+	right: auto; left: 50%;
+	border-left: 3px solid #D9D9D9;
+}
+.tree li:first-child::before {
+  border: 0;
+}
+
+/*We need to remove left-right connectors from elements without 
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+	border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+	border-right: 3px solid #D9D9D9;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+	content: '';
+    position: absolute;
+    top: -8px;
+    left: 50.2%;
+    border-left: 3px solid #D9D9D9;
+    width: 0;
+    height: 28px;
+}
+
+.tree li a{
+	/* border: 3px solid #D9D9D9; */
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #666;
+	font-family: arial, verdana, tahoma;
+	font-size: 13px;
+	display: inline-block;
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+/* .tree li a:hover, .tree li a:hover+ul li a {
+	background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+} */
+/*Connector styles on hover*/
+/* .tree li a:hover+ul li::after, 
+.tree li a:hover+ul li::before, 
+.tree li a:hover+ul::before, 
+.tree li a:hover+ul ul::before{
+	border-color:  #94a0b4;
+} */
+.flow-box {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #BFBFBFB5;
+  top: -3px;
+  position: relative;
+}
+.flow-box p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.flow-header{
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 1px 1px 0px 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.flow-header p {
+  text-align: left;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.flow-body{
+  padding: 10px 25px;
+  line-height: 20px;
+}
+.flow-body p {
+  color: #707070;
+}
+.flow-body p {
+  color: #042B64;
+}
+.flow {
+  position: relative;
+    top: -3px;
+    left: 50%;
+    border-left: 3px solid #D9D9D9;
+    width: 0;
+    height: 27px;
+}
+.circle {
+  color: #48B05D;
+    font-size: 16px;
+    margin-right: -2px;
+}
+.flow2 {
+  position: absolute;
+  right: 0;
+  top: 51px;
+}
+.flow2-pad {
+  padding: 8px 2em;
+  padding-left: 5px;
+  padding-right: 53px;
+}
+.circle2 {
+  position: relative;
+    top: -4px;
+}
+.yes {
+  position: absolute;
+  background: #48B05D;
+  border-radius: 4px;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 14px;
+  right: 48px;
+  top: -13px;
+  z-index: 200;
+}
+.no {
+  position: absolute;
+    background: #FE777E;
+    border-radius: 4px;
+    color: #fff;
+    position: absolute;
+    padding: 3px 10px;
+    font-size: 14px;
+    left: 18px;
+    top: -13px;
+    z-index: 200;
+}
+.start {
+  position: absolute;
+    top: 0px;
+    right: 18em;
+    font-size: 15px;
+    font-weight: 500;
+}
+.end {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  left: 2em;
+  bottom: 1.8em;
+}
+.options-row{
+  position: absolute;
+  right: 0;
+  top: 23px;
+}
+.options-row div i{
+  background: #FE777E;
+    color: #fff;
+    padding: 2px 3px;
+    font-size: 12px;
+    margin-top: 1em;
+    border-radius: 50%;
+    text-align: center;
+}
+.options-row div {
+  margin-bottom: 3px;
+}
+.dropdown-item.active {
+  color: #FE777E !important;
+  background: #FAEEE0;
+  border-radius: 0 !important;
+}
+/* tree end */

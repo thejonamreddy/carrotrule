@@ -32,58 +32,202 @@
 <!-- stepper end -->
 <div class="container-fluid assets">
     <div class="row bor-bottom">
-        <div class="col-lg-8 p-md-0">
-            <!-- text editor start -->
-            <div class="NgxEditor__Wrapper">
-                <ngx-editor-menu [editor]="editor"  [toolbar]="toolbar"> </ngx-editor-menu>
-                <ngx-editor
-                  [editor]="editor"
-                  [ngModel]="html"
-                  [disabled]="false"
-                  [placeholder]="'Type here...'"
-                ></ngx-editor>
-              </div>
-            <!-- text editor end -->            
-        </div>
-        <!-- right sidebar start -->
-        <div class="col-lg-4 sidebar ps-md-0">
-            <div class="d-flex title p-0">
-                <div class="col-md-8 p-0">
-                    <h3 class=" asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> Roles & fields</h3>
+        <div class="col-lg-8">
+            <div class="row title">
+                <div class="col">
+                    <h3 class="">Rule Engine</h3>
                 </div>
-                <!-- <div class="col-md-4 p-0">
+                <div class="col">
                     <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span
                             class="iconify" style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
-                        <span class="text-decoration-underline">Field</span></button>
-                </div> -->
+                        <span class="text-decoration-underline">Engine</span></button>
+                </div>
+            </div>
+            <div class="col-12">
+                <ul class="rule-list">
+                    <li class="rule-item">Engine 1</li>
+                    <li class="rule-item active">Engine 2 <i class="ps-2"><span class="iconify"
+                                data-icon="bx:bxs-edit-alt"></span></i> <i><span class="iconify"
+                                data-icon="ant-design:close-circle-outlined"></span></i></li>
+                    <li class="rule-item">Engine 3</li>
+                    <li class="rule-item">Engine 4</li>
+                    <li class="rule-item">Engine 5</li>
+                </ul>
+            </div>
+            <div class="col-12 pt-3">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p><strong>Project Name</strong> : <span>Sale Team</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>Engine name</strong> : <span>Engine021</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>Industry type</strong> : <span>Industry type</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>Category</strong> : <span>Marketing</span></p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><strong>Keywords</strong> : <span>Marketing, sale</span></p>
+                    </div>
+                    <div class="col-md-12">
+                        <p><strong>Description</strong> : <span>Ut vitae in magnam repellendus accusantium nisi
+                                molestiae.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 rule-box px-0">
+                <div class="rule-header px-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Rule002</h5>
+                        </div>
+                        <div class="col-md-7">
+                            <p class="mb-0"><strong>validity</strong> : <span>02/02/2021 <strong>to </strong>
+                                    02/03/2021</span></p>
+                        </div>
+                        <div class="col-md-2 text-end">
+                            <i class="pe-4"><span class="iconify" data-icon="bx:bxs-edit-alt"></span></i> <i><span
+                                    class="iconify" data-icon="ant-design:close-circle-outlined"></span></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="rule-body px-3">
+                    <!-- list start -->
+                    <div class="col-12 list">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-responsive-md">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:50px;">SNo.</th>
+                                                <th style="width: 200px;"><strong>Field name</strong></th>
+                                                <th style="width: 200px;padding: 0.5rem 0;"><strong>Operator</strong>
+                                                </th>
+                                                <th style="width: 200px;padding: 0.5rem 0;"><strong>Values</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="spacer">
+                                                <td style="width: 50px;">
+                                                    1
+                                                </td>
+                                                <td style="width: 200px;">Regional Web</td>
+                                                <td style="width: 200px;">is between</td>
+                                                <td style="width: 200px;">Value1 - Value2</td>
+                                            </tr>
+                                            <tr class="spacer">
+                                                <td style="width: 50px;">
+                                                    2
+                                                </td>
+                                                <td style="width: 200px;">National Assurance</td>
+                                                <td style="width: 200px;">is equal to</td>
+                                                <td style="width: 200px;">Value1</td>
+                                            </tr>
+                                            <tr class="spacer">
+                                                <td style="width: 50px;">
+                                                    3
+                                                </td>
+                                                <td style="width: 200px;">Product Solutions</td>
+                                                <td style="width: 200px;">is one of</td>
+                                                <td style="width: 200px;">Value1, value2, value3</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- list end -->
+                    <h4 class="mb-2">Output</h4>
+                    <div class="list">
+                        <table class="table table-responsive-md">
+                            <tbody>
+                                <tr class="spacer">
+                                    <td style="width: 200px;">
+                                        <strong>Output heading</strong>
+                                    </td>
+                                    <td style="width: 200px;">Location</td>
+                                    <td style="width: 200px;">Century</td>
+                                    <td style="width: 200px;">Century</td>
+                                    <td style="width: 200px;">Commission (%)</td>
+                                </tr>
+                                <tr class="spacer">
+                                    <td style="width: 200px;">
+                                        <strong>Value</strong>
+                                    </td>
+                                    <td style="width: 200px;">Jaipur</td>
+                                    <td style="width: 200px;">Delhi</td>
+                                    <td style="width: 200px;">Mumbai</td>
+                                    <td style="width: 200px;">5%</td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar start -->
+        <div class="col-lg-4 sidebar">
+            <div class="d-flex title p-0">
+                <h3 class=" asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> Rule</h3>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <ul>
-                        <li class="active cursor" routerLink="../roles-fields">
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify" data-icon="ci:list-checklist-alt"></i></span>
-                            <h5>Roles & fields</h5>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="fa:file-text"></i></span>
+                            <h5>Workspace</h5>
                         </li>
-                        <li class="cursor" routerLink="../communication">
-                            <span class="d-flex justify-content-center align-items-center"><i class="iconify" data-icon="ci:chat"></i></span>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify top-icon"
+                                    data-icon="bx:bx-data"></i></span>
+                            <h5>Data Source</h5>
+                        </li>
+                        <li class="active">
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="ic:sharp-rule"></i></span>
+                            <h5>Rule</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="icon-park-outline:communication"></i></span>
                             <h5>Communication</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="typcn:flow-merge"></i></span>
+                            <h5>Workflow</h5>
+                        </li>
+                        <li>
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="bx:bx-list-ol"></i></span>
+                            <h5>Task</h5>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-8 pt-4">
-                    <h6 class="text-decoration-underline">Select Role</h6>
-                    <div class="form-group">
-                        <select class="form-select">
-                          <option selected>Role_1</option>
-                          <option value="1">One</option>
-                        </select>
-                      </div>
-                    <h6 class="text-decoration-underline pt-4">Field List</h6>
+                    <div class="row">
+                        <div class="col">
+                            <h6>Rule Engine2</h6>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-default float-end p-0 pb-2"
+                                (click)="openModal(user)"><span class="iconify" style="color: #48b05d;"
+                                    data-icon="ant-design:plus-circle-outlined"></span>
+                                <span class="text-decoration-underline">Rule</span></button>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="field-list d-flex">
                                 <div class="col">
-                                    <p>Field_1</p>
+                                    <p>Rule 1</p>
                                 </div>
                                 <div class="col text-end">
                                     <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -97,6 +241,9 @@
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
                                                         data-icon="ant-design:close-circle-outlined"></span></i>
                                                 Delete</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
+                                                        data-icon="akar-icons:eye"></span></i>
+                                                View</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -104,7 +251,7 @@
                         <div class="col-12">
                             <div class="field-list d-flex">
                                 <div class="col">
-                                    <p>Field_2</p>
+                                    <p>Rule 2</p>
                                 </div>
                                 <div class="col text-end">
                                     <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -118,6 +265,9 @@
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
                                                         data-icon="ant-design:close-circle-outlined"></span></i>
                                                 Delete</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
+                                                        data-icon="akar-icons:eye"></span></i>
+                                                View</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -125,7 +275,7 @@
                         <div class="col-12">
                             <div class="field-list d-flex">
                                 <div class="col">
-                                    <p>ComputedField_1</p>
+                                    <p>Rule 3</p>
                                 </div>
                                 <div class="col text-end">
                                     <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -139,6 +289,9 @@
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
                                                         data-icon="ant-design:close-circle-outlined"></span></i>
                                                 Delete</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
+                                                        data-icon="akar-icons:eye"></span></i>
+                                                View</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -146,7 +299,7 @@
                         <div class="col-12">
                             <div class="field-list d-flex">
                                 <div class="col">
-                                    <p>ComputedField_2</p>
+                                    <p>Rule 4</p>
                                 </div>
                                 <div class="col text-end">
                                     <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -160,6 +313,9 @@
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
                                                         data-icon="ant-design:close-circle-outlined"></span></i>
                                                 Delete</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
+                                                        data-icon="akar-icons:eye"></span></i>
+                                                View</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -167,7 +323,7 @@
                         <div class="col-12">
                             <div class="field-list d-flex">
                                 <div class="col">
-                                    <p>ComputedField_125</p>
+                                    <p>Rule 5</p>
                                 </div>
                                 <div class="col text-end">
                                     <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -181,27 +337,9 @@
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
                                                         data-icon="ant-design:close-circle-outlined"></span></i>
                                                 Delete</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="field-list d-flex">
-                                <div class="col">
-                                    <p>ComputedField_25</p>
-                                </div>
-                                <div class="col text-end">
-                                    <i class="cursor" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                                        aria-expanded="false"><span class="iconify"
-                                            data-icon="bx:bx-dots-vertical-rounded"></span></i>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
-                                                        data-icon="carbon:copy"></span></i> Copy</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
-                                                        data-icon="bx:bxs-edit-alt"></span></i> Edit</a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="pe-2"><span class="iconify"
-                                                        data-icon="ant-design:close-circle-outlined"></span></i>
-                                                Delete</a></li>
+                                                        data-icon="akar-icons:eye"></span></i>
+                                                View</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -296,7 +296,7 @@ tr.spacer {
     border-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
-    height: 79vh;
+    height: 112vh;
 }
 .sidebar ul li{
     list-style: none !important;
@@ -465,16 +465,54 @@ ul.dropdown-menu li {
   .plan-form {
     font-size: 0.95rem !important;
 }
-
-::ng-deep .NgxEditor {
-    height: 496px !important;
-    border: 20px solid #E8E8E8 !important;
-    border-radius: 0 !important;
+.rule-list {
+    padding-left: 0;
+    padding-top: 1em;
 }
-::ng-deep .NgxEditor__Wrapper {
-    border: 1px solid #A8A8A8 !important;
-    border-radius: 0 !important;
-    border-bottom: 0 !important;
-    border-right: 0 !important;
-    border-left: 0 !important;
+.rule-list li {
+    list-style: none;
+    display: inline;
+    margin-right: 1em;
+}
+.rule-item{
+    margin: 1em 0;
+    border: 1px solid #B1B1B1;
+    border-radius: 50px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #042B64;
+}
+.rule-item.active{
+    background: #fe6a6b;
+    border-color: #fe6a6b;
+    color: #fff;
+}
+.rule-item.active i{
+   font-size: 12px;
+   margin-right: 5px;
+}
+.rule-box {
+    border: 1px solid #C0C0C0;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+.rule-header h5 {
+    margin-bottom: 0;
+}
+.rule-header button {
+    margin: 0;
+    padding: 0 10px;
+}
+hr {
+    border-bottom: 1px solid #C0C0C0;
+}
+.rule-body label {
+    font-weight: 500;
+    font-size: 16px;
+}
+::placeholder {
+    font-size: 15px;
+}
+.text-success{
+    color: #48B05D;
 }

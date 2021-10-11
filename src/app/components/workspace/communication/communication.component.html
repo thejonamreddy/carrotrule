@@ -1,0 +1,208 @@
+<!-- stepper -->
+<div class="container padding-bottom-3x mb-1">
+    <div class="card-body px-md-5">
+        <div class="steps d-flex flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="bx:bx-target-lock"></i></div>
+                </div>
+                <h4 class="step-title">Define</h4>
+            </div>
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="ant-design:plus-square-outlined"></i></div>
+                </div>
+                <h4 class="step-title">Assets</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="clarity:number-list-line"></i></div>
+                </div>
+                <h4 class="step-title">Excel upload</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><span class="iconify" data-icon="healthicons:i"></span></div>
+                </div>
+                <h4 class="step-title">Analytics</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- stepper end -->
+<div class="container-fluid assets">
+    <div class="row bor-bottom">
+        <div class="col-lg-8 p-md-0">
+            <!-- text editor start -->
+            <div class="NgxEditor__Wrapper">
+                <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+                <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'Type here...'">
+                </ngx-editor>
+            </div>
+            <!-- text editor end -->
+        </div>
+        <!-- right sidebar start -->
+        <div class="col-lg-4 sidebar ps-md-0">
+            <div class="d-flex title p-0">
+                <div class="col-md-8 p-0">
+                    <h3 class=" asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> Roles &
+                        fields</h3>
+                </div>
+                <!-- <div class="col-md-4 p-0">
+                    <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span
+                            class="iconify" style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
+                        <span class="text-decoration-underline">Field</span></button>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <ul>
+                        <li class="cursor" routerLink="../roles-fields">
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="ci:list-checklist-alt"></i></span>
+                            <h5>Roles & fields</h5>
+                        </li>
+                        <li class="active cursor" routerLink="../communication">
+                            <span class="d-flex justify-content-center align-items-center"><i class="iconify"
+                                    data-icon="ci:chat"></i></span>
+                            <h5>Communication</h5>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 pt-4">
+                    <h6 class="text-decoration-underline">Mode of Communication</h6>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" />
+                            <span class="ms-3">SMS</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" checked />
+                            <span class="ms-3">Email</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" checked />
+                            <span class="ms-3">Whatsapp</span>
+                        </label>
+                    </div>
+                    <hr>
+                    <h6>Email</h6>
+                    <div class="comm-box">
+                        <div class="col-12 mb-2">
+                            <select class="form-select">
+                                <option selected>TO</option>
+                                <option value="1">One</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <select class="form-select">
+                                <option selected>CC</option>
+                                <option value="1">One</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <select class="form-select">
+                                <option selected>BCC</option>
+                                <option value="1">One</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="form-group">
+                                <label for="">Subject</label>
+                                <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="form-group">
+                                <p class=" text-danger"><i><span class="iconify"
+                                            data-icon="emojione-monotone:paperclip"></span></i> <span
+                                        class="text-decoration-underline">Attachment</span></p>
+                            </div>
+                        </div>
+                        <!-- footer -->
+                        <div class="row">
+                            <div class="col-12 text-end row-footer">
+                                <img src="../../../../assets/images/delete.svg" alt="">
+                                <img src="../../../../assets/images/edit.svg" alt="">
+                                <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <!-- footer end -->
+                    </div>
+                    <div class="col-12 mb-2 ps-4 pe-4 mb-4">
+                        <label for="">Whatsapp</label>
+                        <select class="form-select">
+                            <option selected>Phone no.</option>
+                            <option value="1">One</option>
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- right sidebar end -->
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-end pt-3 mb-4">
+            <button class="btn btn-secondary me-2">Back</button>
+            <button class="btn btn-primarycolor">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- modal start -->
+<ng-template #user>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">New User</h4>
+        <!-- <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button> -->
+        <span class="close pull-right" aria-label="Close" (click)="modalRef?.hide()"><img
+                src="../../../../assets/images/cross_black.svg" alt=""></span>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4 workspace">
+                <div class="card">
+                    <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
+                    <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
+                </div>
+            </div>
+            <div class="col-md-8 plan-form">
+                <div class="col-12">
+                    <label>Username</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Email</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Email@example.com">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Phone no.</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="8989898989">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- footer -->
+        <div class="col-12 text-center plan-footer">
+            <img src="../../../../assets/images/delete.svg" alt="">
+            <img src="../../../../assets/images/edit.svg" alt="">
+            <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+        </div>
+        <!-- footer end -->
+    </div>
+</ng-template>
+<!-- modal end -->

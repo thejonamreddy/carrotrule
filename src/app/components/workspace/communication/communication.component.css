@@ -296,7 +296,7 @@ tr.spacer {
     border-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
-    height: 79vh;
+    height: 100vh;
 }
 .sidebar ul li{
     list-style: none !important;
@@ -400,8 +400,8 @@ tr.spacer {
     color: #989898;
     font-size: 0.95rem !important;
   }
-  .form-select {
-    font-size: 0.95rem !important;
+  .form-select, p {
+    font-size: 0.9rem !important;
   }
   .plan-form .col-12 {
     margin-bottom: 1em;
@@ -454,22 +454,20 @@ ul.dropdown-menu li {
 .box-icon i {
     color: #FE6A6B;
 }
-.row-footer {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
+
   .row-footer img {
-    margin-left: 1.5em;
-      width: 25px;
+    margin-left: 1em;
+      width: 15px;
   }
   .plan-form {
     font-size: 0.95rem !important;
 }
 
 ::ng-deep .NgxEditor {
-    height: 496px !important;
+    height: 625px !important;
     border: 20px solid #E8E8E8 !important;
     border-radius: 0 !important;
+    /* overflow-y: scroll; */
 }
 ::ng-deep .NgxEditor__Wrapper {
     border: 1px solid #A8A8A8 !important;
@@ -477,4 +475,22 @@ ul.dropdown-menu li {
     border-bottom: 0 !important;
     border-right: 0 !important;
     border-left: 0 !important;
+}
+.checkbox span {
+    font-size: 14.2px;
+}
+hr {
+    border-bottom: 1px solid #C0C0C0;
+}
+.comm-box {
+    border: 1px solid #C0C0C0;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+label {
+    font-weight: 500;
+    font-size: 14px;
+}
+.form-select {
+    font-size: 13px ​!important;
 }

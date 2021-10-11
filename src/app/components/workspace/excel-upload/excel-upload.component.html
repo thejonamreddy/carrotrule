@@ -1,0 +1,151 @@
+<!-- stepper -->
+<div class="container padding-bottom-3x mb-1">
+    <div class="card-body px-md-5">
+        <div class="steps d-flex flex-sm-nowrap justify-content-between padding-top-2x padding-bottom-1x">
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="bx:bx-target-lock"></i></div>
+                </div>
+                <h4 class="step-title">Define</h4>
+            </div>
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="ant-design:plus-square-outlined"></i></div>
+                </div>
+                <h4 class="step-title">Assets</h4>
+            </div>
+            <div class="step completed">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><i class="iconify" data-icon="clarity:number-list-line"></i></div>
+                </div>
+                <h4 class="step-title">Excel upload</h4>
+            </div>
+            <div class="step">
+                <div class="step-icon-wrap">
+                    <div class="step-icon"><span class="iconify" data-icon="healthicons:i"></span></div>
+                </div>
+                <h4 class="step-title">Analytics</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- stepper end -->
+<div class="container-fluid assets">
+    <div class="row">
+        <div class="col-md-5">
+            <div>
+                <h3>Upload Excel file</h3>
+                <div class="form-group files">
+                    <p class="text-center"><img src="../../../../assets/images/upload.png" alt=""></p>
+                    <h3 class="text-center">Drag and drop here </h3>
+                    <h3 class="text-center">or </h3>
+                    <input type="file" class="form-control" multiple="">
+                    <!-- <div class="custom-file-upload ">
+                        <label for="file-upload" class="custom-file-upload1">
+                            Browse FIles
+                        </label>
+                        <input id="file-upload" type="file" />
+                    </div> -->
+                </div>
+
+                <!-- <div class="custom-file-upload">
+                    <label for="file-upload" class="custom-file-upload1">
+                        Browse FIles
+                    </label>
+                    <input id="file-upload" type="file" />
+                </div> -->
+            </div>
+            <!-- list -->
+            <ul class="upload-iconlist">
+                <li class="active"><span class="iconify" data-icon="clarity:upload-cloud-line"></span></li>
+                <li><span class="iconify" data-icon="fa-brands:google-drive"></span></li>
+                <li><span class="iconify" data-icon="akar-icons:dropbox-fill"></span></li>
+                <li><span class="iconify" data-icon="bi:cloud-fill"></span></li>
+            </ul>
+            <!-- list end -->
+        </div>
+        <div class="col-md-7 upload-list">
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="excel-icon"><span class="iconify" data-icon="ri:file-excel-2-line"></span></i>
+                </div>
+                <div class="col-md-4">
+                    <div class="upload-title">
+                        <h3>7 out of 7 fields detected</h3>
+                        <h3>200 list items</h3>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="upload-progress">
+                        <progressbar [value]="100"></progressbar>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <h6>100%</h6>
+                </div>
+                <div class="col-md-1 upload-close">
+                    <i><span class="iconify" data-icon="ant-design:close-circle-outlined"></span></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row border-top-list">
+        <div class="col-md-12 text-end pt-3 mb-4">
+            <button class="btn btn-secondary me-2">Back</button>
+            <button class="btn btn-primarycolor">Next</button>
+        </div>
+    </div>
+</div>
+
+<!-- modal start -->
+<ng-template #user>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">New User</h4>
+        <!-- <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button> -->
+        <span class="close pull-right" aria-label="Close" (click)="modalRef?.hide()"><img
+                src="../../../../assets/images/cross_black.svg" alt=""></span>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4 workspace">
+                <div class="card">
+                    <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
+                    <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
+                </div>
+            </div>
+            <div class="col-md-8 plan-form">
+                <div class="col-12">
+                    <label>Username</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Email</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Email@example.com">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label>Phone no.</label>
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="8989898989">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- footer -->
+        <div class="col-12 text-center plan-footer">
+            <img src="../../../../assets/images/delete.svg" alt="">
+            <img src="../../../../assets/images/edit.svg" alt="">
+            <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+        </div>
+        <!-- footer end -->
+    </div>
+</ng-template>
+<!-- modal end -->

@@ -296,7 +296,6 @@ tr.spacer {
     border-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
-    height: 79vh;
 }
 .sidebar ul li{
     list-style: none !important;
@@ -398,10 +397,7 @@ tr.spacer {
   }
   .plan-form ::placeholder {
     color: #989898;
-    font-size: 0.95rem !important;
-  }
-  .form-select {
-    font-size: 0.95rem !important;
+    font-size: 13px;
   }
   .plan-form .col-12 {
     margin-bottom: 1em;
@@ -416,65 +412,125 @@ tr.spacer {
     padding-bottom: 1.5rem;
 }
 
-ul.dropdown-menu {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 6px 25px #24115d29;
-    border: 1px solid #D9D9D9 !important;
-    height: auto !important;
+/* upload start */
+.files input {
+  outline: 2px dashed #FE6A6B;
+  outline-offset: -10px;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  padding: 192px 0px 85px 35%;
+  text-align: center !important;
+  margin: 0;
+  width: 100% !important;
+  border: 0 !important;
+  border-radius: 28px;
 }
-ul.dropdown-menu li {
-    padding: 0 !important;
-    font-size: 0.85rem;
-    color: #042B64;
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; 
+    border:1px solid #92b0b3;
+ }
+.files{ position:relative}
+.files:after {  pointer-events: none;
+    /* position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50px;
+    right: 0;
+    height: 56px;
+    content: "";
+    background-image: url('../../../../assets/images/draganddrop.svg');
+    display: block;
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat; */
 }
-.field-list {
-    background: #FAEEE0;
-    padding: 0.5em;
-    border-radius: 3px;
-    margin-bottom: 0.5em;
+.color input{ background-color:#f1f1f1;}
+.files:before {
+    /* position: absolute;
+    bottom: 10px;
+    left: 0;  pointer-events: none;
+    width: 100%;
+    right: 0;
+    height: 57px;
+    content: " Drag and drop here ";
+    display: block;
+    margin: 0 auto;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center; */
 }
-.field-list p {
-    margin-bottom: 0;
-    font-size: 0.85rem;
+.custom-file-upload input[type="file"] {
+  display: none;
 }
-.plan-form label {
-    font-weight: 500;
-    color: #042b64;
-    margin-bottom: 0.2em;
+.custom-file-upload .custom-file-upload1 {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
 }
-.box-icon {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #FE6A6B;
-    border-radius: 4px;
-    opacity: 1;
-    padding: 7px 0px;
-    text-align: center;
-    margin-bottom: 0.5em;
+.files h3 {
+  position: relative;
+  top: 9em;
 }
-.box-icon i {
-    color: #FE6A6B;
+.files img {
+  position: relative;
+  top: 10em;
 }
-.row-footer {
-    padding-top: 1em;
-    padding-bottom: 1em;
-  }
-  .row-footer img {
-    margin-left: 1.5em;
-      width: 25px;
-  }
-  .plan-form {
-    font-size: 0.95rem !important;
+.files {
+  position: relative;
+  top: -6em;
+}
+/* upload end */
+/* upload-list */
+.upload-list {}
+.upload-list .excel-icon {
+  color: #FE6A6B;
+    font-size: 55px;
+}
+.upload-list .upload-title {
+  padding: 1.2em 0.5em;
+    padding-top: 1.5em;
+    padding-right: 0;
+}
+.upload-list h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.upload-progress{
+  padding-top: 2em;
+}
+.upload-list h6 {
+  padding-top: 1.8em;
+  font-weight: 400;
+}
+.upload-list .upload-close {
+  padding-top: 1.45em;
+}
+::ng-deep.progress-bar {
+  background-color: #fe6a6b !important;
+}
+::ng-deep.progress {
+  height: 0.5rem;
 }
 
-::ng-deep .NgxEditor {
-    height: 496px !important;
-    border: 20px solid #E8E8E8 !important;
-    border-radius: 0 !important;
+/* upload-list end */
+/* upload-iconlist */
+.upload-iconlist {
+  padding-left: 0;
+  text-align: center;
+  top: -6em;
+  position: relative;
 }
-::ng-deep .NgxEditor__Wrapper {
-    border: 1px solid #A8A8A8 !important;
-    border-radius: 0 !important;
-    border-bottom: 0 !important;
-    border-right: 0 !important;
-    border-left: 0 !important;
+.upload-iconlist li {
+  list-style: none;
+  display: inline;
+  margin-right: 1em;
+  font-size: 20px;
+}
+.upload-iconlist li.active {
+  color: #fe6a6b !important;
+}
+/* upload-iconlist end */
+.border-top-list {
+  border-top: 1px solid #A8A8A8;
 }
