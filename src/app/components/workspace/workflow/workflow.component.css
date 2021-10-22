@@ -296,6 +296,7 @@ tr.spacer {
     border-bottom: 0;
     padding-left: 0;
     margin-bottom: 0;
+    height: 100vh;
 }
 .sidebar ul li{
     list-style: none !important;
@@ -638,3 +639,8 @@ right connector from last child*/
   border-radius: 0 !important;
 }
 /* tree end */
+@media (max-width: 1024px){
+  .sidebar ul {
+      height: auto;
+  }   
+}

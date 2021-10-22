@@ -516,3 +516,12 @@ hr {
 .text-success{
     color: #48B05D;
 }
+@media (max-width: 1024px){
+  .sidebar ul {
+      height: auto;
+  }    
+  .rule-list li {
+    display: inline-block !important;
+    margin: 0.5em !important;
+}
+}

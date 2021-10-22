@@ -1,8 +1,61 @@
 /* lessthan 768px */
 @media (max-width: 768px) {
+    ngx-editor-menu {
+        display: none;
+    }
     
     .manage-workflow h1 {
         font-size: 30px !important;
+    }
+    .category ul li {
+        margin: 1em 0;
+        display: inline-block;
+    }
+    .category ul li {
+        margin: 0.4em 0 !important;
+        list-style: none;
+    }    
+    .category {
+        border-right: 0;
+        border-bottom: 1px solid #b7b7b7;
+        margin-bottom: 1em;
+    }
+    .workspace .btn-primary {
+        border-radius: 0.25rem;
+        background: #fff;
+        color: #404f6a;
+        border: none;
+        padding: 0 !important;
+        font-size: 0.9rem;
+        margin-top: 5px;
+    }
+    .steps .step .step-title {
+        display: none !important;
+    }
+    .steps .step {
+        margin-bottom: 10px !important;
+    }
+}
+
+/* lessthan 768px */
+@media (max-width: 767px) {
+    .as_infobox {
+        float: left !important;
+    }
+    .types-workflow p {
+        display: flex;
+    }
+    .manage-workflow {
+        padding: 0 !important;
+    }
+    .types-workflow {
+        padding: 1em 0 !important;
+    }
+    .types-workflow .col-md-4 {
+        border-bottom: 1px solid #ddd;
+    }
+    .types-workflow .col-md-4:nth-last-child(1) {
+        border-bottom: 0;
     }
 }
 
@@ -10,4 +63,12 @@
     .manage-workflow h1 {
         font-size: 38px !important;
     }
+    .category ul {
+        display: flex;
+    }
+}
+
+@media (max-width: 1024px){
+    
+    
 }
