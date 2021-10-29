@@ -8,7 +8,7 @@
         </div>
         <h4 class="step-title">Define</h4>
       </div>
-      <div class="step completed">
+      <div class="step">
         <div class="step-icon-wrap">
           <div class="step-icon"><i class="iconify" data-icon="ant-design:plus-square-outlined"></i></div>
         </div>
@@ -37,11 +37,11 @@
         <div class="col">
           <h3 class="">Users</h3>
         </div>
-        <div class="col">
+        <!-- <div class="col">
           <button type="button" class="btn btn-default float-end" (click)="openModal(user)"><span class="iconify"
               style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
               <span class="text-decoration-underline">User</span></button>
-        </div>
+        </div> -->
       </div>
       <div class="row">
         <div class="col-12">
@@ -215,7 +215,18 @@
     </div>
     <!-- right sidebar start -->
     <div class="col-xl-4 sidebar">
-      <h3 class="title asset-pad"><span class="iconify" data-icon="akar-icons:arrow-left"></span> User</h3>
+      <!-- heading section -->
+      <div class="d-flex title p-0">
+        <div class="col-md-8 p-0">
+          <h3 class="title asset-pad border-0"><span class="iconify" data-icon="akar-icons:arrow-left"></span> User</h3>
+        </div>
+        <div class="col-md-4 p-0">
+          <button type="button" class="btn btn-default float-end sidebar-btn-right" (click)="openModal(user)"><span class="iconify"
+              style="color: #48b05d;" data-icon="ant-design:plus-circle-outlined"></span>
+            <span class="text-decoration-underline">User</span></button>
+        </div>
+      </div>
+      <!-- heading section end -->
       <div class="row">
         <div class="col-4 col-md-4">
           <ul>
@@ -341,8 +352,8 @@
       <img src="../../../../assets/images/delete.svg" alt="">
       <img src="../../../../assets/images/edit.svg" alt="">
       <a><img src="../../../../assets/images/tick.svg" alt=""></a>
-  </div>
-  <!-- footer end -->
+    </div>
+    <!-- footer end -->
   </div>
 </ng-template>
 <!-- modal end -->

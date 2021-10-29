@@ -644,3 +644,8 @@ right connector from last child*/
       height: auto;
   }   
 }
+.sidebar-btn-right {
+  font-size: 0.9em;
+  padding-top: 4px !important;
+  padding-right: 7px !important;
+}

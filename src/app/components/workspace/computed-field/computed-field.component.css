@@ -463,3 +463,8 @@ ul.dropdown-menu li {
   .plan-form {
     font-size: 0.95rem !important;
 }
+.sidebar-btn-right {
+  font-size: 0.9em;
+  padding-top: 4px !important;
+  padding-right: 7px !important;
+}

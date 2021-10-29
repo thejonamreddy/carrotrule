@@ -291,3 +291,8 @@ label {
   color: #707070;
   padding: 0rem 0.4rem;
 }
+.sidebar-btn-right {
+    font-size: 0.9em;
+    padding-top: 4px !important;
+    padding-right: 7px !important;
+  }
