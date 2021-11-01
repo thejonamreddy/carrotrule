@@ -412,7 +412,13 @@ tr.spacer {
     padding-bottom: 1.5rem;
 }
 .sidebar-btn-right {
-  font-size: 0.9em;
+  font-size: 1em !important;
   padding-top: 4px !important;
   padding-right: 7px !important;
+  font-weight: 500 !important;
+}
+.user-text {
+  margin-left: 0.2em !important;
+    position: relative !important;
+    top: 2px !important;
 }
