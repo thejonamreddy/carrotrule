@@ -4,10 +4,16 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 
+import { HeaderComponent } from '../components/header/header.component';
+import { FooterComponent } from '../components/footer/footer.component';
+import { DndDirective } from './workspace/dnd.directive';
 
 @NgModule({
   declarations: [
-    PagesComponent
+    PagesComponent,
+    HeaderComponent,
+    FooterComponent,
+    DndDirective
   ],
   imports: [
     CommonModule,

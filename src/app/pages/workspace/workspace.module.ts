@@ -23,7 +23,7 @@ import { RuleengineEditComponent } from './ruleengine-edit/ruleengine-edit.compo
 import { CommunicationComponent } from './communication/communication.component';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { ExcelUploadComponent } from './excel-upload/excel-upload.component';
-import { DndDirective } from 'src/app/components/workspace/dnd.directive';
+import { DndDirective } from 'src/app/pages/workspace/dnd.directive';
 import { ProgressComponent } from './progress/progress.component';
 
 @NgModule({
