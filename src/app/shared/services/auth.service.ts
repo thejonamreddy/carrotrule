@@ -13,4 +13,8 @@ export class AuthService {
         body.Username = body.EmailId;
         return this.http.post(`${environment.baseApiUrl}/auth/sign_up`, body);
     }
+
+    signin(body: any): Observable<any> {
+        return this.http.post(`${environment.baseApiUrl}/auth/sign_in`, body);
+    }
 }

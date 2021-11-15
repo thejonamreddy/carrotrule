@@ -1,0 +1,26 @@
+<h4>Sign In</h4>
+<form [formGroup]="signinForm">
+    <div class="alert alert-danger mt-4" *ngIf="error">
+        {{error}}
+    </div>
+    <div class="alert alert-success mt-4" *ngIf="success">
+        {{success}}
+    </div>
+    <div class="mb-4">
+        <label>Username<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="email" formControlName="username">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Password<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="password" formControlName="password">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primarycolor w-100" (click)="submit()">Sign In</button>
+</form>
+<div class="text-center mt-2">
+    Don't have an account? <a href="/auth/signup">Sign Up</a>
+</div>
