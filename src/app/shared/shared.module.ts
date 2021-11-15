@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DndDirective } from '../pages/workspace/dnd.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,12 @@ import { DndDirective } from '../pages/workspace/dnd.directive';
     DndDirective
   ],
   imports: [
-    CommonModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     HeaderComponent,
     FooterComponent,
     DndDirective

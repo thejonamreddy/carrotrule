@@ -1,1 +1,47 @@
-<p>signup works!</p>
+<h4>Sign Up</h4>
+<form [formGroup]="signupForm">
+    <div class="alert alert-danger mt-4" *ngIf="error">
+        {{error}}
+    </div>
+    <div class="alert alert-success mt-4" *ngIf="success">
+        {{success}}
+    </div>
+    <div class="mb-4">
+        <label>Name<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="text" formControlName="Name">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Email<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="email" formControlName="EmailId">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Password<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="password" formControlName="Password">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Confirm Password<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="password" formControlName="ConfrimPassword">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Company<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="text" formControlName="Company">
+        </div>
+    </div>
+    <div class="mb-4">
+        <label>Mobile Number<span class="text-danger">*</span></label>
+        <div class="form-group">
+            <input class="form-control" type="number" formControlName="MobileNumber">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primarycolor w-100" (click)="submit()">Sign Up</button>
+</form>
