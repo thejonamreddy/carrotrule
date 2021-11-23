@@ -12,4 +12,8 @@ export class UserService {
         return this.http.post(`${environment.baseApiUrl}/user/getUserList`, body);
     }
 
+    addUser(body: any): Observable<any> {
+        return this.http.post(`${environment.baseApiUrl}/user/addUser`, body);
+    }
+
 }

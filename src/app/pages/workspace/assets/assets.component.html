@@ -224,41 +224,73 @@
         src="../../../../assets/images/cross_black.svg" alt=""></span>
   </div>
   <div class="modal-body">
-    <div class="row">
-      <div class="col-md-4 workspace">
-        <div class="card">
-          <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
-          <div class="edit-icon2"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
-        </div>
-      </div>
-      <div class="col-md-8 plan-form">
-        <div class="col-12">
-          <label>Username</label>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Username">
-          </div>
-        </div>
-        <div class="col-12">
-          <label>Email</label>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="Email@example.com">
-          </div>
-        </div>
-        <div class="col-12">
-          <label>Phone no.</label>
-          <div class="form-group">
-            <input class="form-control" type="text" placeholder="8989898989">
-          </div>
-        </div>
-      </div>
+    <div class="alert alert-danger mt-4" *ngIf="error">
+      {{error}}
     </div>
+    <div class="alert alert-success mt-4" *ngIf="success">
+      {{success}}
+    </div>
+    <form [formGroup]="newUserForm">
+      <div class="row">
+        <div class="col-md-4 workspace">
+          <div class="card">
+            <img src="../../../../assets/images/image.png" class="card-img-top" alt="...">
+            <div class="edit-icon2"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
+          </div>
+        </div>
+        <div class="col-md-8 plan-form">
+          <div class="col-12">
+            <label>Name</label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Name" formControlName="Name">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Last Name</label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Last Name" formControlName="LastName">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Username</label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Username" formControlName="UserId">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Email</label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Email@example.com" formControlName="EmailId">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Password</label>
+            <div class="form-group">
+              <input class="form-control" type="password" placeholder="***********" formControlName="Password">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Confirm Password</label>
+            <div class="form-group">
+              <input class="form-control" type="password" placeholder="***********" formControlName="ConfrimPassword">
+            </div>
+          </div>
+          <div class="col-12">
+            <label>Phone no.</label>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="8989898989" formControlName="MobileNumber">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
     <!-- footer -->
     <div class="col-12 text-center plan-footer">
       <img src="../../../../assets/images/delete.svg" alt="">
       <img src="../../../../assets/images/edit.svg" alt="">
-      <a><img src="../../../../assets/images/tick.svg" alt=""></a>
+      <a (click)="addUser()"><img src="../../../../assets/images/tick.svg" alt=""></a>
     </div>
     <!-- footer end -->
   </div>

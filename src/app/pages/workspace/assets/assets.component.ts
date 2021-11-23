@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, TemplateRef } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { first } from 'rxjs/operators';
 import { UserService } from 'src/app/shared/services/user.service';
@@ -16,10 +17,25 @@ export class AssetsComponent implements OnInit {
   users: any[] = [];
   error = '';
   success = '';
+  newUserForm: FormGroup;
 
-  constructor(private modalService: BsModalService, private userService: UserService) {}
+  constructor(private fb: FormBuilder, private modalService: BsModalService, private userService: UserService) {
+    this.newUserForm = this.fb.group({
+      Name: ['', [Validators.required]],
+      LastName: ['', [Validators.required]],
+      UserId: ['', [Validators.required]],
+      EmailId: ['', [Validators.required, Validators.email]],
+      Password: ['', [Validators.required]],
+      ConfrimPassword: ['', [Validators.required]],
+      MobileNumber: ['', [Validators.required]]
+    });
+  }
  
   ngOnInit(): void {
+    this.getUsers();
+  }
+
+  private getUsers() {
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '');
     let formData = new FormData(); 
     formData.append('managerId', userInfo.customerId); 
@@ -43,7 +59,30 @@ export class AssetsComponent implements OnInit {
   }
 
   toggleDesign() {
-      this.toggleContent = this.toggleContent ? false : true;
-   }
+    this.toggleContent = this.toggleContent ? false : true;
+  }
+
+  addUser() {
+    this.error = '';
+    this.success = '';
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '');
+    const value = this.newUserForm.value;
+    value.ManagerId = userInfo.customerId;
+    this.userService.addUser(value).pipe(first()).subscribe((response: Response) => {
+      if (parseInt(response.ResponseCode) < 0) {
+        this.error = response.ResponseMessage;
+      } else {
+        this.newUserForm.reset();
+        this.modalService.hide();
+        this.getUsers();
+      }
+    }, ({ error }: HttpErrorResponse) => {
+      if (error && error.message) {
+        this.error = error.message;
+      } else {
+        this.error = 'Something went wrong!';
+      }
+    });
+  }
 
 }
