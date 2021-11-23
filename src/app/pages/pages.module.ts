@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { PlanService } from '../shared/services/plan.service';
+import { UserService } from '../shared/services/user.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PlanService } from '../shared/services/plan.service';
     SharedModule
   ],
   providers: [
-    PlanService
+    PlanService,
+    UserService
   ]
 })
 export class PagesModule { }
