@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { Response } from '../../shared/models/response';
 
 @Component({
   selector: 'app-signin',
@@ -30,7 +31,8 @@ export class SigninComponent implements OnInit {
     this.success = '';
     const value = this.signinForm.value;
     this.authService.signin(value).pipe(first()).subscribe((response: Response) => {
-      this.router.navigate(['app', 'home']);
+      sessionStorage.setItem('userInfo', JSON.stringify(response));
+      this.router.navigateByUrl('app/home');
     }, ({ error }: HttpErrorResponse) => {
       if (error && error.message) {
         this.error = error.message;
