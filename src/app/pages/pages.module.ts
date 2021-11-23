@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { PlanService } from '../shared/services/plan.service';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,9 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     PagesRoutingModule,
     SharedModule
+  ],
+  providers: [
+    PlanService
   ]
 })
 export class PagesModule { }

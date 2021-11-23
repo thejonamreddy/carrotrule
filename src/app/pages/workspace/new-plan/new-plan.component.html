@@ -30,94 +30,102 @@
     </div>
 </div>
 <!-- stepper end -->
-<div class="container-fluid plan">
-    <div class="col-12">
-        <h3 class="title">Commission plan</h3>
-    </div>
-    <div class="row pt-3">
-        <div class="col-md-3 col-lg-3 col-xl-2 workspace">
-            <div class="card">
-                <img src="../../../../assets/images/plan.png" class="card-img-top" alt="...">
-                <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
-            </div>
+<form [formGroup]="planForm">
+    <div class="container-fluid plan">
+        <div class="col-12">
+            <h3 class="title">Commission plan</h3>
         </div>
-        <div class="col-md-9 col-lg-9 col-xl-10 plan-form">
-            <div class="row">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Project name<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Sale Team">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Name<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Manager Commission Plan">
-                        </div>
-                    </div>
+        <div class="alert alert-danger mt-4" *ngIf="error">
+            {{error}}
+        </div>
+        <div class="alert alert-success mt-4" *ngIf="success">
+            {{success}}
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-3 col-lg-3 col-xl-2 workspace">
+                <div class="card">
+                    <img src="../../../../assets/images/plan.png" class="card-img-top" alt="...">
+                    <div class="edit-icon"><span class="iconify" data-icon="eva:edit-2-fill"></span></div>
                 </div>
+            </div>
+            <div class="col-md-9 col-lg-9 col-xl-10 plan-form">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Start Date<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text input-left"><i class="iconify"
-                                        data-icon="bx:bx-calendar"></i></span>
-                                <input type="text" class="form-control bl-0" placeholder="27/07/2021">
-                                <span class="input-group-text input-right"><i class="iconify" data-icon="ci:clock"></i></span>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Project name<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Sale Team" formControlName="projectname">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Name<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Manager Commission Plan" formControlName="name">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>End Date</label>
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text input-left"><i class="iconify"
-                                        data-icon="bx:bx-calendar"></i></span>
-                                <input type="text" class="form-control bl-0" placeholder="27/07/2021">
-                                <span class="input-group-text input-right"><i class="iconify" data-icon="ci:clock"></i></span>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Start Date<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text input-left"><i class="iconify"
+                                            data-icon="bx:bx-calendar"></i></span>
+                                    <input type="text" class="form-control bl-0" placeholder="27/07/2021" formControlName="startdate">
+                                    <span class="input-group-text input-right"><i class="iconify" data-icon="ci:clock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>End Date</label>
+                            <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text input-left"><i class="iconify"
+                                            data-icon="bx:bx-calendar"></i></span>
+                                    <input type="text" class="form-control bl-0" placeholder="27/07/2021" formControlName="enddate">
+                                    <span class="input-group-text input-right"><i class="iconify" data-icon="ci:clock"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Industry type<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Industry type">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Industry type<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Industry type" formControlName="industrytype">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Category<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Select Category" formControlName="category">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Keywords<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Type Keywords" formControlName="keywords">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Category<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Select Category">
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Keywords<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Type Keywords">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <label>Description<span class="text-danger">*</span></label>
-                        <div class="form-group">
-                            <textarea name="" class="form-control" placeholder="Type here..." id=""></textarea>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                            <label>Description<span class="text-danger">*</span></label>
+                            <div class="form-group">
+                                <textarea name="" class="form-control" placeholder="Type here..." id="" formControlName="description"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- footer -->
-    <div class="col-12 text-end plan-footer">
-        <img src="../../../../assets/images/delete.svg" alt="">
-        <img src="../../../../assets/images/edit.svg" alt="">
-        <a routerLink="user"><img src="../../../../assets/images/tick.svg" alt=""></a>
+        <!-- footer -->
+        <div class="col-12 text-end plan-footer">
+            <img src="../../../../assets/images/delete.svg" alt="">
+            <img src="../../../../assets/images/edit.svg" alt="">
+            <a (click)="submit()"><img src="../../../../assets/images/tick.svg" alt=""></a>
+        </div>
+        <!-- footer end -->
     </div>
-    <!-- footer end -->
-</div>
+</form>
