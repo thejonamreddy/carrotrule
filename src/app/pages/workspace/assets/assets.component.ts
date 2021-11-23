@@ -85,4 +85,31 @@ export class AssetsComponent implements OnInit {
     });
   }
 
+  deleteUser(user: any) {
+    const body = {
+      Id: user.Id,
+      UserId: user.UserId,
+      Password: user.Password,
+      Name: user.Name,
+      LastName: user.LastName,
+      MobileNumber: user.MobileNumber,
+      EmailId: user.EmailId,
+      UserStatus: user.UserStatus,
+      ManagerId: user.ManagerId
+    };
+    this.userService.deleteUser(body).pipe(first()).subscribe((response: Response) => {
+      if (parseInt(response.ResponseCode) < 0) {
+        this.error = response.ResponseMessage;
+      } else {
+        this.getUsers();
+      }
+    }, ({ error }: HttpErrorResponse) => {
+      if (error && error.message) {
+        this.error = error.message;
+      } else {
+        this.error = 'Something went wrong!';
+      }
+    });
+  }
+
 }
