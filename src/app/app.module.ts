@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { AppInterceptor } from './app.interceptor';
+import { LoadingService } from './shared/util/loading.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AppInterceptor } from './app.interceptor';
     AppRoutingModule
   ],
   providers: [
+    LoadingService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AppInterceptor,
