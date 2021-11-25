@@ -29,6 +29,10 @@ export class SigninComponent implements OnInit {
   submit() {
     this.error = '';
     this.success = '';
+    if (!this.signinForm.valid) {
+      this.error = "There are incomplete required fields. Please complete them.";
+      return;
+    }
     const value = this.signinForm.value;
     this.authService.signin(value).pipe(first()).subscribe((response: Response) => {
       sessionStorage.setItem('userInfo', JSON.stringify(response));

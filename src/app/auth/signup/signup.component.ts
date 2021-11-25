@@ -32,6 +32,10 @@ export class SignupComponent implements OnInit {
   submit() {
     this.error = '';
     this.success = '';
+    if (!this.signupForm.valid) {
+      this.error = "There are incomplete required fields. Please complete them.";
+      return;
+    }
     const value = this.signupForm.value;
     this.authService.signup(value).pipe(first()).subscribe((response: Response) => {
       if (parseInt(response.ResponseCode) < 0) {
