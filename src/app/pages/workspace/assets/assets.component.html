@@ -67,16 +67,16 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr class="spacer" *ngFor="let user of users">
+                    <tr class="spacer" *ngFor="let usr of users">
                       <td style="width: 50px;">
                         <input type="checkbox" id="checkbox-1-1" class="regular-checkbox" />
                       </td>
-                      <td style="width: 200px;">{{user.username}}</td>
-                      <td style="width: 200px;">{{user.EmailId}}</td>
-                      <td style="width: 200px;">{{user.MobileNumber}}</td>
+                      <td style="width: 200px;">{{usr.username}}</td>
+                      <td style="width: 200px;">{{usr.EmailId}}</td>
+                      <td style="width: 200px;">{{usr.MobileNumber}}</td>
                       <td>
                         <div class="d-flex">
-                          <a class="btn btn-default" href="#"><span class="iconify"
+                          <a class="btn btn-default" (click)="openModal(user, usr)"><span class="iconify"
                               data-icon="bx:bxs-edit-alt"></span></a>
                           <a class="btn btn-default" (click)="deleteUser(user)"><span class="iconify"
                               data-icon="ic:outline-cancel"></span></a>
@@ -216,7 +216,7 @@
 <!-- modal start -->
 <ng-template #user>
   <div class="modal-header">
-    <h4 class="modal-title pull-left">New User</h4>
+    <h4 class="modal-title pull-left">{{userInContext ? 'Edit' : 'New'}} User</h4>
     <!-- <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
       <span aria-hidden="true" class="visually-hidden">&times;</span>
     </button> -->
@@ -290,7 +290,7 @@
     <div class="col-12 text-center plan-footer">
       <img src="../../../../assets/images/delete.svg" alt="">
       <img src="../../../../assets/images/edit.svg" alt="">
-      <a (click)="addUser()"><img src="../../../../assets/images/tick.svg" alt=""></a>
+      <a (click)="addOrEditUser()"><img src="../../../../assets/images/tick.svg" alt=""></a>
     </div>
     <!-- footer end -->
   </div>

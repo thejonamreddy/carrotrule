@@ -18,6 +18,7 @@ export class AssetsComponent implements OnInit {
   error = '';
   success = '';
   newUserForm: FormGroup;
+  userInContext: any = undefined;
 
   constructor(private fb: FormBuilder, private modalService: BsModalService, private userService: UserService) {
     this.newUserForm = this.fb.group({
@@ -36,7 +37,7 @@ export class AssetsComponent implements OnInit {
   }
 
   private getUsers() {
-    const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '');
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || 'false');
     let formData = new FormData(); 
     formData.append('managerId', userInfo.customerId); 
     this.userService.getUserList(formData).pipe(first()).subscribe((response: Response) => {
@@ -54,21 +55,46 @@ export class AssetsComponent implements OnInit {
     });
   }
 
-  openModal(user: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(user);
+  openModal(template: TemplateRef<any>, user?: any) {
+    if (user) {
+      this.userInContext = user;
+      this.newUserForm.setValue({
+        Name: user.Name,
+        LastName: user.LastName,
+        UserId: user.UserId,
+        EmailId: user.EmailId,
+        Password: '',
+        ConfrimPassword: '',
+        MobileNumber: user.MobileNumber
+      });
+    } else {
+      this.userInContext = undefined;
+      this.newUserForm.reset();
+    }
+    this.modalRef = this.modalService.show(template);
   }
 
   toggleDesign() {
     this.toggleContent = this.toggleContent ? false : true;
   }
 
-  addUser() {
+  addOrEditUser() {
     this.error = '';
     this.success = '';
-    const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '');
+    const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || 'false');
     const value = this.newUserForm.value;
-    value.ManagerId = userInfo.customerId;
-    this.userService.addUser(value).pipe(first()).subscribe((response: Response) => {
+    let promise = this.userService.addUser(value);
+    if (this.userInContext) {
+      value.Id = this.userInContext.Id;
+      value.CustomerId = this.userInContext.CustomerId;
+      value.ManagerId = this.userInContext.ManagerId;
+      value.UserStatus = userInfo.UserStatus;
+      value.Company = userInfo.Company;
+      promise = this.userService.updateUser(value);
+    } else {
+      value.ManagerId = userInfo.customerId;
+    }
+    promise.pipe(first()).subscribe((response: Response) => {
       if (parseInt(response.ResponseCode) < 0) {
         this.error = response.ResponseMessage;
       } else {

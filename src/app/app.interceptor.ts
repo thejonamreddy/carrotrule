@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class AppInterceptor implements HttpInterceptor {
     constructor() { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || '');
+        const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || 'false');
         if (userInfo) {
             request = request.clone({
                 setHeaders: {

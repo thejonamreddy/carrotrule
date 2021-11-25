@@ -20,4 +20,8 @@ export class UserService {
         return this.http.post(`${environment.baseApiUrl}/user/deleteUser`, body);
     }
 
+    updateUser(body: any): Observable<any> {
+        return this.http.post(`${environment.baseApiUrl}/user/updateUser`, body);
+    }
+
 }
