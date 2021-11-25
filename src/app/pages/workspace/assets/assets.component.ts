@@ -75,6 +75,10 @@ export class AssetsComponent implements OnInit {
   addOrEditUser() {
     this.error = '';
     this.success = '';
+    if (!this.newUserForm.valid) {
+      this.error = "There are incomplete required fields. Please complete them.";
+      return;
+    }
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || 'false');
     const value = this.newUserForm.value;
     let promise;
