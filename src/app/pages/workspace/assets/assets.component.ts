@@ -24,10 +24,7 @@ export class AssetsComponent implements OnInit {
     this.newUserForm = this.fb.group({
       Name: ['', [Validators.required]],
       LastName: ['', [Validators.required]],
-      UserId: ['', [Validators.required]],
       EmailId: ['', [Validators.required, Validators.email]],
-      Password: ['', [Validators.required]],
-      ConfrimPassword: ['', [Validators.required]],
       MobileNumber: ['', [Validators.required]]
     });
   }
@@ -61,10 +58,7 @@ export class AssetsComponent implements OnInit {
       this.newUserForm.setValue({
         Name: user.Name,
         LastName: user.LastName,
-        UserId: user.UserId,
         EmailId: user.EmailId,
-        Password: '',
-        ConfrimPassword: '',
         MobileNumber: user.MobileNumber
       });
     } else {
@@ -83,16 +77,19 @@ export class AssetsComponent implements OnInit {
     this.success = '';
     const userInfo = JSON.parse(sessionStorage.getItem('userInfo') || 'false');
     const value = this.newUserForm.value;
-    let promise = this.userService.addUser(value);
+    let promise;
     if (this.userInContext) {
       value.Id = this.userInContext.Id;
       value.CustomerId = this.userInContext.CustomerId;
       value.ManagerId = this.userInContext.ManagerId;
-      value.UserStatus = userInfo.UserStatus;
-      value.Company = userInfo.Company;
+      value.UserId = this.userInContext.UserId;
       promise = this.userService.updateUser(value);
     } else {
       value.ManagerId = userInfo.customerId;
+      value.Password = "1234567";
+      value.ConfrimPassword = "1234567";
+      value.UserId = value.EmailId;
+      promise = this.userService.addUser(value);
     }
     promise.pipe(first()).subscribe((response: Response) => {
       if (parseInt(response.ResponseCode) < 0) {

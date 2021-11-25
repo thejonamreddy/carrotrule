@@ -78,7 +78,7 @@
                         <div class="d-flex">
                           <a class="btn btn-default" (click)="openModal(user, usr)"><span class="iconify"
                               data-icon="bx:bxs-edit-alt"></span></a>
-                          <a class="btn btn-default" (click)="deleteUser(user)"><span class="iconify"
+                          <a class="btn btn-default" (click)="deleteUser(usr)"><span class="iconify"
                               data-icon="ic:outline-cancel"></span></a>
                         </div>
                       </td>
@@ -252,27 +252,9 @@
             </div>
           </div>
           <div class="col-12">
-            <label>Username</label>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Username" formControlName="UserId">
-            </div>
-          </div>
-          <div class="col-12">
             <label>Email</label>
             <div class="form-group">
               <input class="form-control" type="text" placeholder="Email@example.com" formControlName="EmailId">
-            </div>
-          </div>
-          <div class="col-12">
-            <label>Password</label>
-            <div class="form-group">
-              <input class="form-control" type="password" placeholder="***********" formControlName="Password">
-            </div>
-          </div>
-          <div class="col-12">
-            <label>Confirm Password</label>
-            <div class="form-group">
-              <input class="form-control" type="password" placeholder="***********" formControlName="ConfrimPassword">
             </div>
           </div>
           <div class="col-12">
